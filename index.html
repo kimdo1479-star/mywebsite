@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+   
+    <style>
+#popupImg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+#popupImg.show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+</style>
+    
     <meta charset="UTF-8">
     <title>내 사이트</title>
 
@@ -23,6 +41,12 @@ button {
 
 <body>
 
+    
+    <img id="popupImg" src="NAL.jpg" width="200">
+    
+    <button onclick="showImage()">
+    이미지 보기
+</button>
 <h1 style="font-size:80px;">ㅎㅅㅇㅌㅌ</h1>
 
 <button onclick="location.href='gallery.html'">
