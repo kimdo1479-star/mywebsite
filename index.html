@@ -16,23 +16,7 @@ body {
 button {
     padding: 10px 20px;
     font-size: 18px;
-}
-
-/* 이미지 팝업 */
-#popupImg {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 0;
-    transition: all 0.3s ease;
-    pointer-events: none;
-    width: 250px;
-}
-
-#popupImg.show {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
+    margin: 10px;
 }
 </style>
 
@@ -40,36 +24,17 @@ button {
 
 <body>
 
-<!-- 이미지 -->
-<img id="popupImg" src="https://ac-o.namu.la/20231029sac/0e1e7015c75c86bd3c6c13a734ff5a10eb065d6fb0f2cc60760aaa1bc3265d26.png?expires=1781928873&key=klf6DU7vCkfx8ErQ89xfaw&type=orig">
-
-<!-- 버튼 -->
-<button onclick="showImage()">
-    이미지 보기
-</button>
-
 <h1 style="font-size:80px;">ㅎㅅㅇㅌㅌ</h1>
 
+<!-- 내부 페이지 이동 -->
 <button onclick="location.href='gallery.html'">
     서지훈
 </button>
 
+<!-- 외부 사이트 이동 -->
 <button onclick="window.location.href='https://hitomi.la'">
     Hitomi 이동
 </button>
-
-<!-- JS -->
-<script>
-function showImage() {
-    const img = document.getElementById("popupImg");
-
-    img.classList.add("show");
-
-    setTimeout(() => {
-        img.classList.remove("show");
-    }, 3000);
-}
-</script>
 
 </body>
 </html>
